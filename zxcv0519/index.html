@@ -3,7 +3,7 @@
 資料夾 / 網址名：zxcv0519
 LOGO：zxcv0519.png / zxcv0519.jpg / zxcv0519.jpeg（擇一放入同資料夾即可）
 手動修改提示：
-1. HTML 已自動整理縮排，可直接搜尋姓名,公司,電話,按鈕文字修改。
+1. HTML 已自動整理縮排，可直接搜尋姓名、公司、電話、按鈕文字修改。
 2. LOGO 請與上方資料夾 / 威妥瑪網址名完全相同，只改副檔名即可。
 3. 支援 LOGO：.png / .jpg / .jpeg。
 4. 修改前建議先備份 index.html。
@@ -216,10 +216,12 @@ LOGO：zxcv0519.png / zxcv0519.jpg / zxcv0519.jpeg（擇一放入同資料夾即
         line-height:1.05;
         margin:10px 0 7px
       }
+      /* 已放大公司名稱尺寸 */
       .meta{
         font-family:'DM Sans','Noto Sans TC',sans-serif;
-        font-size:9px;
-        color:var(--sub)
+        font-size:12.5px;
+        color:var(--sub);
+        margin-top:6px;
       }
       .seal{
         width:118px;
@@ -229,12 +231,12 @@ LOGO：zxcv0519.png / zxcv0519.jpg / zxcv0519.jpeg（擇一放入同資料夾即
         display:grid;
         place-items:center;
         background:var(--paper2);
-        overflow:hidden; /* 確保圖片放大後切成圓形 */
+        overflow:hidden;
       }
       .logo{
-        width:100%; /* 改為 100% 貼齊外圓圈 */
-        height:100%; /* 改為 100% 貼齊外圓圈 */
-        object-fit:contain; /* 保持比例；若希望填滿可改為 cover */
+        width:100%;
+        height:100%;
+        object-fit:contain;
       }
       .quote{
         padding:24px 30px;
@@ -246,26 +248,29 @@ LOGO：zxcv0519.png / zxcv0519.jpg / zxcv0519.jpeg（擇一放入同資料夾即
       .quickbar{
         padding:18px 30px;
         display:flex;
-        gap:8px
+        gap:10px
       }
+      /* 已放大手機/信箱快捷按鈕的尺寸與點擊範圍 */
       .quick{
         font-family:'DM Sans','Noto Sans TC',sans-serif;
         text-decoration:none;
         color:var(--ink);
         border:1px solid var(--line);
         border-radius:999px;
-        padding:9px 13px;
+        padding:11px 16px;
         display:flex;
-        gap:7px;
+        gap:8px;
         align-items:center;
-        font-size:8.5px
+        font-size:11.5px
       }
       .quick i{
-        color:var(--accent)
+        color:var(--accent);
+        font-size:12px;
       }
       .links{
         padding:0 30px 28px
       }
+      /* 已放大下方清單按鈕的尺寸與點擊間距 */
       .story-link{
         font-family:'DM Sans','Noto Sans TC',sans-serif;
         text-decoration:none;
@@ -273,14 +278,15 @@ LOGO：zxcv0519.png / zxcv0519.jpg / zxcv0519.jpeg（擇一放入同資料夾即
         display:flex;
         align-items:center;
         justify-content:space-between;
-        padding:12px 0;
+        padding:15px 0;
         border-bottom:1px solid var(--line);
-        font-size:9.5px;
+        font-size:12.5px;
         font-weight:700
       }
       .story-link b{
         color:var(--accent);
-        font-weight:400
+        font-weight:400;
+        font-size:15px;
       }
       .foot{
         background:var(--bg);
@@ -302,7 +308,6 @@ LOGO：zxcv0519.png / zxcv0519.jpg / zxcv0519.jpeg（擇一放入同資料夾即
           width:88px;
           height:88px
         }
-        /* 手機版也會自動跟隨 .seal 的 88px 滿版呈現 */
         .name{
           font-size:34px
         }
