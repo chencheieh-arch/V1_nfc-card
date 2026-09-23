@@ -1,0 +1,436 @@
+<!-- ============================================================
+享刻畫 NFC｜自動生成個人網站
+資料夾 / 網址名：zxcv0519
+LOGO：zxcv0519.png / zxcv0519.jpg / zxcv0519.jpeg（擇一放入同資料夾即可）
+手動修改提示：
+1. HTML 已自動整理縮排，可直接搜尋姓名,公司,電話,按鈕文字修改。
+2. LOGO 請與上方資料夾 / 威妥瑪網址名完全相同，只改副檔名即可。
+3. 支援 LOGO：.png / .jpg / .jpeg。
+4. 修改前建議先備份 index.html。
+============================================================ -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>老馮/馮茂智｜品牌故事版</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --bg:#1A365D;
+        --deep:#102744;
+        --paper:#F7F9FC;
+        --paper2:#EDF2F7;
+        --ink:#2D3748;
+        --sub:#718096;
+        --accent:#C5A059;
+        --accent2:#8EAED0;
+        --line:rgba(45,55,72,.12);
+        --glow1:#2A5298;
+        --glow2:#8EC5FC;
+        --glow3:#C5A059;
+      }
+      *{
+        box-sizing:border-box
+      }
+      html{
+        scroll-behavior:smooth
+      }
+      body{
+        margin:0;
+        -webkit-font-smoothing:antialiased
+      }
+      a{
+        -webkit-tap-highlight-color:transparent
+      }
+      .v22-intro{
+        position:fixed;
+        inset:0;
+        z-index:99999;
+        background:var(--bg);
+        display:grid;
+        place-items:center;
+        transition:opacity .6s ease,visibility .6s ease
+      }
+      .v22-intro.done{
+        opacity:0;
+        visibility:hidden
+      }
+      .v22-intro-stage{
+        position:relative;
+        width:220px;
+        height:220px;
+        display:grid;
+        place-items:center
+      }
+      .v22-phone{
+        width:56px;
+        height:90px;
+        border:1px solid var(--accent);
+        border-radius:17px;
+        display:grid;
+        place-items:center;
+        color:var(--accent);
+        font-size:24px;
+        animation:vfPhone .9s ease both
+      }
+      .v22-orbit{
+        position:absolute;
+        width:36px;
+        height:36px;
+        border-radius:50%;
+        display:grid;
+        place-items:center;
+        background:rgba(255,255,255,.09);
+        border:1px solid rgba(255,255,255,.16);
+        color:var(--accent2);
+        opacity:0;
+        animation:vfScatter .9s .12s ease forwards
+      }
+      .v22-orbit.i1{
+        --x:-78px;
+        --y:-58px
+      }
+      .v22-orbit.i2{
+        --x:80px;
+        --y:-50px
+      }
+      .v22-orbit.i3{
+        --x:-82px;
+        --y:52px
+      }
+      .v22-orbit.i4{
+        --x:82px;
+        --y:55px
+      }
+      .v22-orbit.i5{
+        --x:0px;
+        --y:-98px
+      }
+      .v22-intro-title{
+        position:absolute;
+        top:177px;
+        color:#fff;
+        font-size:14px;
+        font-weight:800;
+        letter-spacing:5px;
+        opacity:0;
+        animation:vfTitle .7s .48s ease forwards
+      }
+      .v22-intro-sub{
+        position:absolute;
+        top:202px;
+        color:rgba(255,255,255,.55);
+        font-size:9px;
+        letter-spacing:2px;
+        opacity:0;
+        animation:vfTitle .7s .6s ease forwards
+      }
+      @keyframes vfPhone{
+        from{
+          transform:scale(.8);
+          opacity:0
+        }
+        to{
+          transform:none;
+          opacity:1
+        }
+      }
+      @keyframes vfScatter{
+        from{
+          transform:scale(.4);
+          opacity:0
+        }
+        to{
+          transform:translate(var(--x),var(--y));
+          opacity:1
+        }
+      }
+      @keyframes vfTitle{
+        from{
+          opacity:0;
+          transform:translateY(5px)
+        }
+        to{
+          opacity:1;
+          transform:none
+        }
+      }
+      .reveal{
+        opacity:0;
+        transform:translateY(12px);
+        transition:.55s ease
+      }
+      .reveal.in{
+        opacity:1;
+        transform:none
+      }
+      @media(prefers-reduced-motion:reduce){
+        *{
+          animation:none!important;
+          transition:none!important
+        }
+        .v22-intro{
+          display:none
+        }
+        .reveal{
+          opacity:1;
+          transform:none
+        }
+      }
+      body{
+        min-height:100vh;
+        background:var(--paper2);
+        font-family:'Noto Serif TC','DM Sans',serif;
+        color:var(--ink);
+        padding:20px
+      }
+      .book{
+        width:min(100%,620px);
+        margin:auto;
+        background:var(--paper);
+        border-radius:30px;
+        overflow:hidden;
+        box-shadow:0 28px 80px rgba(60,45,35,.12)
+      }
+      .hero{
+        padding:36px 30px 28px;
+        display:grid;
+        grid-template-columns:1fr 118px;
+        gap:24px;
+        align-items:center
+      }
+      .chapter{
+        font-family:'DM Sans',sans-serif;
+        font-size:7px;
+        letter-spacing:2.4px;
+        color:var(--accent);
+        font-weight:800
+      }
+      .name{
+        font-size:42px;
+        line-height:1.05;
+        margin:10px 0 7px
+      }
+      .meta{
+        font-family:'DM Sans','Noto Sans TC',sans-serif;
+        font-size:9px;
+        color:var(--sub)
+      }
+      .seal{
+        width:118px;
+        height:118px;
+        border-radius:50%;
+        border:1px solid var(--accent2);
+        display:grid;
+        place-items:center;
+        background:var(--paper2);
+        overflow:hidden; /* 確保圖片放大後切成圓形 */
+      }
+      .logo{
+        width:100%; /* 改為 100% 貼齊外圓圈 */
+        height:100%; /* 改為 100% 貼齊外圓圈 */
+        object-fit:contain; /* 保持比例；若希望填滿可改為 cover */
+      }
+      .quote{
+        padding:24px 30px;
+        border-top:1px solid var(--line);
+        border-bottom:1px solid var(--line);
+        font-size:16px;
+        line-height:2
+      }
+      .quickbar{
+        padding:18px 30px;
+        display:flex;
+        gap:8px
+      }
+      .quick{
+        font-family:'DM Sans','Noto Sans TC',sans-serif;
+        text-decoration:none;
+        color:var(--ink);
+        border:1px solid var(--line);
+        border-radius:999px;
+        padding:9px 13px;
+        display:flex;
+        gap:7px;
+        align-items:center;
+        font-size:8.5px
+      }
+      .quick i{
+        color:var(--accent)
+      }
+      .links{
+        padding:0 30px 28px
+      }
+      .story-link{
+        font-family:'DM Sans','Noto Sans TC',sans-serif;
+        text-decoration:none;
+        color:var(--ink);
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:12px 0;
+        border-bottom:1px solid var(--line);
+        font-size:9.5px;
+        font-weight:700
+      }
+      .story-link b{
+        color:var(--accent);
+        font-weight:400
+      }
+      .foot{
+        background:var(--bg);
+        color:#fff;
+        padding:12px 30px;
+        font-family:'DM Sans',sans-serif;
+        font-size:6px;
+        letter-spacing:2px
+      }
+      @media(max-width:450px){
+        body{
+          padding:10px
+        }
+        .hero{
+          grid-template-columns:1fr 88px;
+          padding:28px 20px 23px
+        }
+        .seal{
+          width:88px;
+          height:88px
+        }
+        /* 手機版也會自動跟隨 .seal 的 88px 滿版呈現 */
+        .name{
+          font-size:34px
+        }
+        .quote{
+          padding:20px;
+          font-size:14px
+        }
+        .quickbar,.links{
+          padding-left:20px;
+          padding-right:20px
+        }
+        .quickbar{
+          overflow:auto
+        }
+        .quick{
+          flex:0 0 auto
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="v22-intro" id="v22Intro" aria-hidden="true">
+      <div class="v22-intro-stage">
+        <div class="v22-phone">
+          <i class="fas fa-mobile-screen-button">
+          </i>
+        </div>
+        <span class="v22-orbit i1">
+          <i class="fas fa-address-card">
+          </i>
+        </span>
+        <span class="v22-orbit i2">
+          <i class="fab fa-line">
+          </i>
+        </span>
+        <span class="v22-orbit i3">
+          <i class="fab fa-instagram">
+          </i>
+        </span>
+        <span class="v22-orbit i4">
+          <i class="fas fa-location-dot">
+          </i>
+        </span>
+        <span class="v22-orbit i5">
+          <i class="fas fa-globe">
+          </i>
+        </span>
+        <div class="v22-intro-title">個人網站</div>
+        <div class="v22-intro-sub">老馮/馮茂智</div>
+      </div>
+    </div>
+    <article class="book">
+      <section class="hero">
+        <div>
+          <div class="chapter">BRAND STORY / 09</div>
+          <h1 class="name">老馮/馮茂智</h1>
+          <div class="meta">二馬創意行銷有限公司</div>
+        </div>
+        <div class="seal">
+          <img data-local-logo="zxcv0519" class="logo" src="zxcv0519.png" alt="老馮/馮茂智 LOGO" onerror="tryNextLocalLogo_(this)">
+        </div>
+      </section>
+      <div class="quote">「主持 / 婚禮顧問 / 活動統籌 / 短影音代操 / 整合行銷」</div>
+      <div class="quickbar reveal">
+        <a class="quick" href="tel:0986364789">
+          <i class="fas fa-mobile-screen-button">
+          </i>
+          <span>手機</span>
+        </a>
+        <a class="quick" href="mailto:zxcv0519@gmail.com">
+          <i class="fas fa-envelope">
+          </i>
+          <span>信箱</span>
+        </a>
+      </div>
+      <nav class="links reveal">
+        <a class="story-link" href="zxcv0519.vcf">
+          <span>加入聯絡人</span>
+          <b>→</b>
+        </a>
+        <a class="story-link" href="https://lin.ee/vFdK2eK" target="_blank" rel="noopener noreferrer">
+          <span>LINE</span>
+          <b>→</b>
+        </a>
+        <a class="story-link" href="https://www.instagram.com/oldfong519?stkn=MjU3ZHhxY3RoMm4w&amp;utm_source=qr" target="_blank" rel="noopener noreferrer">
+          <span>Instagram</span>
+          <b>→</b>
+        </a>
+        <a class="story-link" href="https://www.facebook.com/share/1MvPhhWYDe/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+          <span>Facebook</span>
+          <b>→</b>
+        </a>
+        <a class="story-link" href="https://www.facebook.com/share/1PyK4YBAET/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+          <span>來去花蓮</span>
+          <b>→</b>
+        </a>
+      </nav>
+      <footer class="foot">STORY · SERVICE · CONNECTION</footer>
+    </article>
+    <script>
+      window.addEventListener('load',function(){setTimeout(function(){var x=document.getElementById('v22Intro');if(x)x.classList.add('done')},1150)});document.addEventListener('DOMContentLoaded',function(){var e=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){e.forEach(function(x){x.classList.add('in')});return}var o=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.05});e.forEach(function(x){o.observe(x)})});
+    </script>
+    <script id="nfc-local-logo-fallback">
+      function tryNextLocalLogo_(img) {
+        if (!img) return;
+      
+        var base = img.getAttribute("data-local-logo") || "zxcv0519";
+        var tries = [base + ".png", base + ".jpg", base + ".jpeg"];
+        var current = (img.getAttribute("src") || "").split("?")[0].toLowerCase();
+        var index = -1;
+      
+        for (var i = 0; i < tries.length; i++) {
+          if (current.endsWith(tries[i].toLowerCase())) {
+            index = i;
+            break;
+          }
+        }
+      
+        var next = index + 1;
+        if (next < tries.length) {
+          img.setAttribute("src", tries[next]);
+          return;
+        }
+      
+        img.onerror = null;
+        img.style.visibility = "hidden";
+        console.warn("找不到 LOGO：", tries.join(" / "));
+      }
+    </script>
+  </body>
+</html>
